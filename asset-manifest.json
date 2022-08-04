@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.6c5463cc.css",
+    "main.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.a29fa7fc.js",
+    "static/js/787.50a5886a.chunk.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js",
+    "index.html": "/Jone-Doe-Portfolio-MERN-Web-client/index.html",
+    "main.6c5463cc.css.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.6c5463cc.css.map",
+    "main.a29fa7fc.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.a29fa7fc.js.map",
+    "787.50a5886a.chunk.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c5463cc.css",
+    "static/js/main.a29fa7fc.js"
+  ]
+}
