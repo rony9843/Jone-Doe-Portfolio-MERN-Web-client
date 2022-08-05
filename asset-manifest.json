@@ -1,16 +1,27 @@
 {
   "files": {
     "main.css": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.02ae0fc5.css",
-    "main.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.9103adb0.js",
+    "main.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.78b6c024.js",
     "static/js/787.50a5886a.chunk.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js",
     "static/media/profileImage.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/profileImage.7f5f334092205e4148cf.jpg",
+    "static/media/dp-portfolio-10.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-10.50e82532a8c2092d707c.jpg",
+    "static/media/dp-portfolio-04.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-04.4e82f413156ef57c8e0b.jpg",
+    "static/media/dp-portfolio-08.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-08.d2b65c968cf234b50ceb.jpg",
+    "static/media/dp-portfolio-03.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-03.c90901ac1a691c8d1f9a.jpg",
+    "static/media/dp-portfolio-09.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-09.5471fba62d2e161183bb.jpg",
+    "static/media/dp-portfolio-06.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-06.4c8f0f7c9ec7c65612b6.jpg",
+    "static/media/dp-portfolio-07.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-07.06e46f8001abb5168707.jpg",
+    "static/media/dp-portfolio-05.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-05.ef226b714b05eab38a38.jpg",
+    "static/media/dp-portfolio-02.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-02.c2ee84296b0e116bb673.jpg",
+    "static/media/dp-portfolio-11.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-11.009526034c40e94a8731.jpg",
+    "static/media/dp-portfolio-01.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-01.b57531e144a4c9e4886c.jpg",
     "index.html": "/Jone-Doe-Portfolio-MERN-Web-client/index.html",
     "main.02ae0fc5.css.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.02ae0fc5.css.map",
-    "main.9103adb0.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.9103adb0.js.map",
+    "main.78b6c024.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.78b6c024.js.map",
     "787.50a5886a.chunk.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02ae0fc5.css",
-    "static/js/main.9103adb0.js"
+    "static/js/main.78b6c024.js"
   ]
 }
