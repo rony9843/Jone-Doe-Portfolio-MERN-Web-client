@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://rony9843.github.io/Jone-Doe-Portfolio-MERN-Web-client",
+  "homepage": "http://rony9843.github.io/Jone-Doe-Portfolio-MERN-Web-client",
   "name": "jone-doe-client",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-text-transition": "^3.0.2",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
