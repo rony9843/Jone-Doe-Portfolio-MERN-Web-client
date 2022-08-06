@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.02ae0fc5.css",
-    "main.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.78b6c024.js",
+    "main.css": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.8eedd2ec.css",
+    "main.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.6b085412.js",
     "static/js/787.50a5886a.chunk.js": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js",
     "static/media/profileImage.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/profileImage.7f5f334092205e4148cf.jpg",
     "static/media/dp-portfolio-10.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-10.50e82532a8c2092d707c.jpg",
@@ -16,12 +16,12 @@
     "static/media/dp-portfolio-11.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-11.009526034c40e94a8731.jpg",
     "static/media/dp-portfolio-01.jpg": "/Jone-Doe-Portfolio-MERN-Web-client/static/media/dp-portfolio-01.b57531e144a4c9e4886c.jpg",
     "index.html": "/Jone-Doe-Portfolio-MERN-Web-client/index.html",
-    "main.02ae0fc5.css.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.02ae0fc5.css.map",
-    "main.78b6c024.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.78b6c024.js.map",
+    "main.8eedd2ec.css.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/css/main.8eedd2ec.css.map",
+    "main.6b085412.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/main.6b085412.js.map",
     "787.50a5886a.chunk.js.map": "/Jone-Doe-Portfolio-MERN-Web-client/static/js/787.50a5886a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02ae0fc5.css",
-    "static/js/main.78b6c024.js"
+    "static/css/main.8eedd2ec.css",
+    "static/js/main.6b085412.js"
   ]
 }
