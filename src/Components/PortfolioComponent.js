@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
+
 import img1 from "../Asset/dp-portfolio-01.jpg";
 import img2 from "../Asset/dp-portfolio-02.jpg";
 import img3 from "../Asset/dp-portfolio-03.jpg";
@@ -63,7 +67,42 @@ const WebDesign = [
   webDesignimg11,
 ];
 
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    maxWidth: "45%",
+
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
+
 export default function PortfolioComponent() {
+  // react modal
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  // react modal image src
+  const [modalImage, setModalImage] = useState();
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   // for user select option
   const [selectOption, setSelectOption] = useState("All Subject");
 
@@ -84,25 +123,38 @@ export default function PortfolioComponent() {
 
   return (
     <PortfolioComponentBackground className="container mt-5 pt-5">
-      <div className="d-flex justify-content-center ">
-        <div className="optionBar p-4 mb-5 ">
+      <div className="d-flex justify-content-center  ">
+        <div className="optionBar row  p-4 mb-5 d-flex justify-content-center">
           {option.map((op) => (
-            <span
-              className={
-                selectOption === op ? "p-3 active-Option " : "p-3 single-option"
-              }
-              onClick={() => setSelectOption(op)}
-            >
-              {op}
-            </span>
+            <div className=" optionList col-lg-3 col-md-3  ">
+              <span
+                className={
+                  selectOption === op
+                    ? "pb-3 active-Option "
+                    : "pb-3 single-option"
+                }
+                onClick={() => setSelectOption(op)}
+              >
+                {op}
+              </span>
+            </div>
           ))}
         </div>
       </div>
       <div className="mt-3 imageSec row">
         {selectImage.map((img) => (
-          <div className="mb-5 col-lg-4 col-md-6 col-sm-12">
+          <div className=" mb-5 col-lg-4 col-md-6 col-sm-12">
             <div>
-              <img src={img} alt="" />
+              <img
+                onClick={() => {
+                  openModal();
+                  setModalImage(img);
+                }}
+                className="hoverImage"
+                src={img}
+                alt=""
+              />
+              <div></div>
             </div>
 
             <div className="mt-3 imageTitleAndDes">
@@ -110,12 +162,35 @@ export default function PortfolioComponent() {
                 <span>Lorem, ipsum </span>
               </div>
               <div className="imageDes mt-2">
-                <h4>T-shirt design is the popular design for digital market</h4>
+                <span>
+                  T-shirt design is the popular design for digital market
+                </span>
               </div>
             </div>
           </div>
         ))}
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div class="d-flex justify-content-end">
+          {" "}
+          <h4 onClick={closeModal} style={{ color: "red", cursor: "pointer" }}>
+            X
+          </h4>
+        </div>
+        <div>
+          <Carousel>
+            {selectImage.map((img) => (
+              <div>
+                <img src={modalImage} className="img-fluid ModalImage" alt="" />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </Modal>
     </PortfolioComponentBackground>
   );
 }
@@ -126,7 +201,11 @@ const PortfolioComponentBackground = styled.div`
     border-radius: 5px;
     background-color: #fff8fa;
     border-radius: 5px;
+    width: 570px;
   }
+  .optionList {
+  }
+
   .single-option {
     cursor: pointer;
   }
@@ -138,6 +217,9 @@ const PortfolioComponentBackground = styled.div`
   .imageSec img {
     border-radius: 5px;
     width: 100%;
+    box-shadow: 0 25px 65px rgb(0 0 0 / 10%);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
   }
   .imageTitleAndDes {
   }
@@ -146,5 +228,27 @@ const PortfolioComponentBackground = styled.div`
     font-weight: 400;
   }
   .imageDes {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hoverImage:hover {
+    margin-top: -20px;
+  }
+  .ModalImage {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 771px) {
+    .optionList {
+      width: 50%;
+      padding: 20px 0px;
+      text-align: center;
+    }
+    .optionBar span {
+      padding: 16px 10px;
+    }
+    .ModalImage {
+      width: 95%;
+    }
   }
 `;
