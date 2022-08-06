@@ -121,6 +121,26 @@ export default function PortfolioComponent() {
     }
   }, [selectOption]);
 
+  // for screen size
+  const ScrnSixe = () => {
+    let Ssize = window.innerWidth;
+
+    if (Ssize <= 850) {
+      const customStyles = {
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          minWidth: "85%",
+
+          transform: "translate(-50%, -50%)",
+        },
+      };
+    }
+  };
+
   return (
     <PortfolioComponentBackground className="container mt-5 pt-5">
       <div className="d-flex justify-content-center  ">
@@ -148,6 +168,7 @@ export default function PortfolioComponent() {
               <img
                 onClick={() => {
                   openModal();
+                  ScrnSixe();
                   setModalImage(img);
                 }}
                 className="hoverImage"
@@ -236,6 +257,9 @@ const PortfolioComponentBackground = styled.div`
   }
   .ModalImage {
     width: 50%;
+  }
+  .modalStyle {
+    background-color: red;
   }
 
   @media only screen and (max-width: 771px) {
