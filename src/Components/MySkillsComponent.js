@@ -26,13 +26,27 @@ export default function MySkillsComponent() {
   return (
     <MySkillsBackgournd className="">
       <div className="container main-sec">
+        <div className=" tital-for-contact-me d-flex justify-content-center">
+          <h3>
+            <b>
+              My <span style={{ color: "#f9004d" }}>Skills</span>
+            </b>
+            <hr
+              style={{
+                backgroundColor: "#f9004d",
+                height: "4px",
+                borderRadius: "10px",
+              }}
+            />
+          </h3>
+        </div>
         <div className="row">
           <div className="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center">
             <img src={profileImage} class="img-fluid" alt="ProfileImage" />
           </div>
           <div className="col-lg-7 col-md-12 col-sm-12">
             <div className="inner-text-right">
-              <span>My Skills</span>
+              <span></span>
             </div>
             <div className="right-side-title">
               {SkillList.map((dt) => (
@@ -55,7 +69,7 @@ const MySkillsBackgournd = styled.div`
   background-color: #f8f9fc;
 
   .main-sec {
-    padding: 150px 0;
+    padding: 50px 0;
     margin: 0 auto;
   }
   .main-sec img {

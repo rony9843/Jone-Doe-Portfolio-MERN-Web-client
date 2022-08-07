@@ -1,3 +1,8 @@
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import React, { useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import styled from "styled-components";
@@ -13,6 +18,29 @@ export default function IntroduceComponents() {
     );
     return () => clearTimeout(intervalId);
   }, []);
+
+  const socialMedia = [
+    {
+      icone: <FacebookIcon className="socialMediaSingelIcon mx-1" />,
+      link: "#",
+    },
+    {
+      icone: <InstagramIcon className="socialMediaSingelIcon m-1" />,
+      link: "#",
+    },
+    {
+      icone: <TwitterIcon className="socialMediaSingelIcon m-1" />,
+      link: "#",
+    },
+    {
+      icone: <LinkedInIcon className="socialMediaSingelIcon m-1" />,
+      link: "#",
+    },
+    {
+      icone: <GitHubIcon className="socialMediaSingelIcon m-1" />,
+      link: "#",
+    },
+  ];
 
   const TEXTS = ["UX Designer.", "Content Writter.", "UI Designer."];
 
@@ -37,6 +65,9 @@ export default function IntroduceComponents() {
                   </TextTransition>
                 </h1>
                 <h2 className="mt-2">based in USA.</h2>
+                <div className="socialMediaIcon">
+                  {socialMedia.map((dt) => dt.icone)}
+                </div>
               </div>
             </div>
           </div>
@@ -85,6 +116,20 @@ const Introbackground = styled.div`
     font-weight: 700;
     font-size: 57px;
   }
+  .socialMediaIcon {
+  }
+  .socialMediaSingelIcon {
+    background-color: black;
+    border-radius: 50%;
+    padding: 8px;
+    color: #f8f9fc;
+    font-size: 48px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .socialMediaSingelIcon:hover {
+    background-color: red;
+  }
 
   @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .main-sec img {
@@ -101,6 +146,9 @@ const Introbackground = styled.div`
     }
     .inner-text-right {
       margin-top: 35px;
+    }
+    .socialMediaSingelIcon {
+      font-size: 38px;
     }
   }
 
