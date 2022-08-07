@@ -3,10 +3,7 @@ import ProgressBar from "react-animated-progress-bar";
 import "react-circular-progressbar/dist/styles.css";
 import styled from "styled-components";
 
-export default function CompletePojectComponent() {
-  // progress bar  percentage
-  const percentage = 66;
-
+export default function CompleteProjectComponent() {
   const PojectCom = [
     {
       sName: "Photoshop",
@@ -32,7 +29,7 @@ export default function CompletePojectComponent() {
         <div class="mt-5 pt-3 d-flex justify-content-center">
           <h3>
             <strong>
-              Complete <span style={{ color: "#f9004d" }}>Poject</span>
+              Complete <span style={{ color: "#f9004d" }}>Project</span>
             </strong>
             <hr
               style={{
@@ -46,7 +43,7 @@ export default function CompletePojectComponent() {
         <div className="container  pt-3 d-flex justify-content-center">
           <div className="row d-flex justify-content-center">
             {PojectCom.map((dt) => (
-              <div className="col-lg-3 col-md-3 col-sm-3 PojectComProgressBar">
+              <div className="col-lg-3 col-md-3 col-sm-3  PojectComProgressBar">
                 <div>
                   <ProgressBar
                     width="230"
@@ -86,8 +83,14 @@ const CompletePojectBackground = styled.div`
     background-color: red;
   }
 
-  @media only screen and (max-width: 477px) {
+  @media only screen and (max-width: 575px) {
     .PojectComProgressBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #ffc0cb2b;
+      border-radius: 10px;
+      margin: 10px 0px;
     }
   }
 `;

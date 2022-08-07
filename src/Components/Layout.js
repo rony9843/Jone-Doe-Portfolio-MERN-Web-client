@@ -1,5 +1,6 @@
 import React from "react";
-import CompletePojectComponent from "./CompletePojectComponent";
+import CompleteProjectComponent from "./CompleteProjectComponent";
+import ContactMe from "./ContactMe";
 import IntroduceComponents from "./IntroduceComponents";
 import MySkillsComponent from "./MySkillsComponent";
 import PortfolioComponent from "./PortfolioComponent";
@@ -9,7 +10,8 @@ export default function Layout() {
       <IntroduceComponents></IntroduceComponents>
       <PortfolioComponent></PortfolioComponent>
       <MySkillsComponent></MySkillsComponent>
-      <CompletePojectComponent></CompletePojectComponent>
+      <CompleteProjectComponent></CompleteProjectComponent>
+      <ContactMe></ContactMe>
     </div>
   );
 }
