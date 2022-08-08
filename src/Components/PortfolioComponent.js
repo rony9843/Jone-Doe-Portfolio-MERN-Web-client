@@ -198,7 +198,10 @@ export default function PortfolioComponent() {
       >
         <div class="d-flex justify-content-end">
           {" "}
-          <h4 onClick={closeModal} style={{ color: "red", cursor: "pointer" }}>
+          <h4
+            onClick={closeModal}
+            style={{ color: "#f9004d", cursor: "pointer" }}
+          >
             X
           </h4>
         </div>
@@ -231,8 +234,8 @@ const PortfolioComponentBackground = styled.div`
     cursor: pointer;
   }
   .active-Option {
-    color: red;
-    border-bottom: 3px solid red;
+    color: #f9004d;
+    border-bottom: 3px solid #f9004d;
     cursor: pointer;
   }
   .imageSec img {
@@ -259,7 +262,7 @@ const PortfolioComponentBackground = styled.div`
     width: 50%;
   }
   .modalStyle {
-    background-color: red;
+    background-color: #f9004d;
   }
 
   @media only screen and (max-width: 771px) {

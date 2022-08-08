@@ -25,19 +25,19 @@ export default function IntroduceComponents() {
       link: "#",
     },
     {
-      icone: <InstagramIcon className="socialMediaSingelIcon m-1" />,
+      icone: <InstagramIcon className="socialMediaSingelIcon mx-1" />,
       link: "#",
     },
     {
-      icone: <TwitterIcon className="socialMediaSingelIcon m-1" />,
+      icone: <TwitterIcon className="socialMediaSingelIcon mx-1" />,
       link: "#",
     },
     {
-      icone: <LinkedInIcon className="socialMediaSingelIcon m-1" />,
+      icone: <LinkedInIcon className="socialMediaSingelIcon mx-1" />,
       link: "#",
     },
     {
-      icone: <GitHubIcon className="socialMediaSingelIcon m-1" />,
+      icone: <GitHubIcon className="socialMediaSingelIcon mx-1" />,
       link: "#",
     },
   ];
@@ -125,10 +125,11 @@ const Introbackground = styled.div`
     color: #f8f9fc;
     font-size: 48px;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
   }
   .socialMediaSingelIcon:hover {
-    background-color: red;
+    background-color: #f9004d;
+    margin-top: -20px;
   }
 
   @media only screen and (min-width: 992px) and (max-width: 1200px) {

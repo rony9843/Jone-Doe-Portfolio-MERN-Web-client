@@ -278,10 +278,10 @@ const AboutMeBackground = styled.div`
     border-radius: 5px;
   }
   .activeOptionText {
-    color: red;
+    color: #f9004d;
   }
   .activeOptionHr {
-    background-color: red;
+    background-color: #f9004d;
     opacity: 60%;
     width: 100%;
   }

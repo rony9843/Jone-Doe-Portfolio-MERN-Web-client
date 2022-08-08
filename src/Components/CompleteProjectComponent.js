@@ -57,7 +57,7 @@ export default function CompleteProjectComponent() {
                       fair: "orangered",
                       good: "#6a1b9a",
                       excellent: "#f9004d",
-                      poor: "red",
+                      poor: "#f9004d",
                     }}
                   />
                 </div>
@@ -80,7 +80,7 @@ export default function CompleteProjectComponent() {
 
 const CompletePojectBackground = styled.div`
   .ProgressBarClass {
-    background-color: red;
+    background-color: #f9004d;
   }
 
   @media only screen and (max-width: 575px) {
