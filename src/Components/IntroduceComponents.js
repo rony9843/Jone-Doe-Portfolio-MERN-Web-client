@@ -3,10 +3,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import styled from "styled-components";
-import profileImage from "../Asset/profileImage.jpg";
 
 export default function IntroduceComponents() {
   const [index, setIndex] = useState(0);
@@ -17,6 +16,19 @@ export default function IntroduceComponents() {
       3000 // every 3 seconds
     );
     return () => clearTimeout(intervalId);
+  }, []);
+
+  // ? for getImage
+  const [profileImageState, setProfileImageState] = useState("");
+
+  // * useEffect for fetch profile image url
+
+  useEffect(() => {
+    fetch("http://localhost:4000/editProfile")
+      .then((response) => response.json())
+      .then((json) => {
+        setProfileImageState(json.image_url.url);
+      });
   }, []);
 
   const socialMedia = [
@@ -50,7 +62,11 @@ export default function IntroduceComponents() {
         <div className="container main-sec">
           <div className="row">
             <div className="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center">
-              <img src={profileImage} class="img-fluid" alt="ProfileImage" />
+              <img
+                src={profileImageState}
+                class="img-fluid"
+                alt="ProfileImage"
+              />
             </div>
             <div className="col-lg-7 col-md-12 col-sm-12">
               <div className="inner-text-right">
