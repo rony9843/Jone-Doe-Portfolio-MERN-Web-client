@@ -21,13 +21,24 @@ export default function IntroduceComponents() {
   // ? for getImage
   const [profileImageState, setProfileImageState] = useState("");
 
+  // ? for get profile top title
+  const [proTopTitle, setProfileTopTitle] = useState("");
+
   // * useEffect for fetch profile image url
 
   useEffect(() => {
+    // ? get image
     fetch("http://localhost:4000/editProfile")
       .then((response) => response.json())
       .then((json) => {
         setProfileImageState(json.image_url.url);
+      });
+
+    // ? get top title
+    fetch("http://localhost:4000/editProfile/getProfileTitle")
+      .then((response) => response.json())
+      .then((json) => {
+        setProfileTopTitle(json.message.topTitle);
       });
   }, []);
 
@@ -70,7 +81,7 @@ export default function IntroduceComponents() {
             </div>
             <div className="col-lg-7 col-md-12 col-sm-12">
               <div className="inner-text-right">
-                <span>welcome to my world</span>
+                <span>{proTopTitle}</span>
               </div>
               <div className="right-side-title">
                 Hi, I’m Jone Doe
