@@ -21,6 +21,17 @@ export default function IntroduceComponents() {
   // ? for getImage
   const [profileImageState, setProfileImageState] = useState("");
 
+  const [inputProfileName, setInputProfileName] = useState("");
+
+  // * useEffect for fetch profile top title
+  useEffect(() => {
+    fetch("https://damp-ravine-37109.herokuapp.com/editProfile/getProfileName")
+      .then((response) => response.json())
+      .then((json) => {
+        setInputProfileName(json.message.ProfileName);
+      });
+  }, []);
+
   // ? for get profile top title
   const [proTopTitle, setProfileTopTitle] = useState("");
 
@@ -28,17 +39,31 @@ export default function IntroduceComponents() {
 
   useEffect(() => {
     // ? get image
-    fetch("http://localhost:4000/editProfile")
+    fetch("https://damp-ravine-37109.herokuapp.com/editProfile")
       .then((response) => response.json())
       .then((json) => {
         setProfileImageState(json.image_url.url);
       });
 
     // ? get top title
-    fetch("http://localhost:4000/editProfile/getProfileTitle")
+    fetch("https://damp-ravine-37109.herokuapp.com/editProfile/getProfileTitle")
       .then((response) => response.json())
       .then((json) => {
         setProfileTopTitle(json.message.topTitle);
+      });
+  }, []);
+
+  // ? for get user Bottom Title
+  const [inputProfileBottomTitle, setInputProfileBottomTitle] = useState("");
+
+  // * useEffect for fetch profile top title
+  useEffect(() => {
+    fetch(
+      "https://damp-ravine-37109.herokuapp.com/editProfile/getProfileBottomTitle"
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        setInputProfileBottomTitle(json.message.bottomTitle);
       });
   }, []);
 
@@ -65,7 +90,20 @@ export default function IntroduceComponents() {
     },
   ];
 
-  const TEXTS = ["UX Designer.", "Content Writter.", "UI Designer."];
+  const [TEXTS, setTexts] = useState(["Logo "]);
+
+  // * useEffect for fetch profile top title
+  useEffect(() => {
+    fetch("https://damp-ravine-37109.herokuapp.com/editProfile/getProfileSkill")
+      .then((response) => response.json())
+      .then((json) => {
+        const skName = json.ProfileSkill.map((sk) => sk.skill);
+
+        console.log(skName);
+
+        setTexts(skName);
+      });
+  }, []);
 
   return (
     <div>
@@ -84,14 +122,14 @@ export default function IntroduceComponents() {
                 <span>{proTopTitle}</span>
               </div>
               <div className="right-side-title">
-                Hi, I’m Jone Doe
+                {inputProfileName}
                 <br />
                 <h1>
                   <TextTransition springConfig={presets.wobbly}>
                     {TEXTS[index % TEXTS.length]}
                   </TextTransition>
                 </h1>
-                <h2 className="mt-2">based in USA.</h2>
+                <h2 className="mt-2">{inputProfileBottomTitle}</h2>
                 <div className="socialMediaIcon">
                   {socialMedia.map((dt) => dt.icone)}
                 </div>
